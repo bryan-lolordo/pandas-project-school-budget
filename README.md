@@ -1,40 +1,81 @@
 # pandas-challenge
 Pandas
 
-# Overview of the analysis:
-The purpose of this analysis is to create a machine learning model to help determine and predict which applicants will have success in their projects and should receive funding. The goal is to use TensorFlow to create a model then optimize it to increase the accuracy. 
+In this project, I will create and manipulate Pandas DataFrames to analyze school and standardized test data.
 
-# Results:
-1. Original model received accuracy of 72.5%
-2. Optimized model received accuracy level of 79%
+As a first task, I have been asked to analyze the district-wide standardized test results. I'll be given access to every student's math and reading scores, as well as various information on the schools they attend. The task is to aggregate the data to showcase obvious trends in school performance.
 
-# Data Preprocessing:
+# District Summary
+Create a high-level snapshot, in a DataFrame, of the district's key metrics, including the following:
 
-1. What variable(s) are the target(s) for your model?
-  **Answer** The target is the Is_Successful column
+- Total schools
+- Total students
+- Total budget
+- Average math score
+- Average reading score
+- % passing math (the percentage of students who passed math)
+- % passing reading (the percentage of students who passed reading)
+- % overall passing (the percentage of students who passed math AND reading)
 
-2. What variable(s) are the features for your model?
-  **Answer** Feature list of this model are: name, application type, afiliation, classification, use_case, organization, income, special consideration, status, and ask amount
+# School Summary
+- Create a DataFrame that summarizes key metrics about each school, including the following:
 
-3. What variable(s) should be removed from the input data because they are neither targets nor features?
-  **Answer** EIN (Employee identification number)
+- School name
+- School type
+- Total students
+- Total school budget
+- Per student budget
+- Average math score
+- Average reading score
+- % passing math (the percentage of students who passed math)
+- % passing reading (the percentage of students who passed reading)
+- % overall passing (the percentage of students who passed math AND reading)
 
-# Compiling, Training, and Evaluating the Model:
+# Highest-Performing Schools (by % Overall Passing)
+Create a DataFrame that highlights the top 5 performing schools based on % Overall Passing. Include the following metrics:
 
-1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
-  **Answer** For this model 3 hidden layers each with many neurons because the compute seems to increase the accuracy above 75%. This is expensive and costly. The first activations is relu and the other layers are sigmoid it might boost accuracy using the functions. Readjusting my data that names as a get dummies can factor in with better scores.
+- School name
+- School type
+- Total students
+- Total school budget
+- Per student budget
+- Average math score
+- Average reading score
+- % passing math (the percentage of students who passed math)
+- % passing reading (the percentage of students who passed reading)
+- % overall passing (the percentage of students who passed math AND reading)
 
-2. Were you able to achieve the target model performance?
-  **Answer** Yes
+# Lowest-Performing Schools (by % Overall Passing)
+Create a DataFrame that highlights the bottom 5 performing schools based on % Overall Passing. Include the following metrics:
 
-3. What steps did you take in your attempts to increase model performance?
-  **Answer** I was required to convert the NAME into data points which has the biggest impact on improving the efficiency but costly as it requires adding a third layer using sigmoid activation function. 
+- School name
+- School type
+- Total students
+- Total school budget
+- Per student budget
+- Average math score
+- Average reading score
+- % passing math (the percentage of students who passed math)
+- % passing reading (the percentage of students who passed reading)
+- % overall passing (the percentage of students who passed math AND reading)
 
-# Summary: 
-Overall the accuracy is above 75% and we are able to correctly classify each in the test data 75% of the time. An applicant has an 80% chance of being success if they follow -
-  Name of applicants appears more than 5 times
-  Type of applications following T3, T4, T5, T6, T7, T8, T10, T19
-  Application of following classification ...
+# Math Scores by Grade
+Create a DataFrame that lists the average math score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
-# Recommendation:
-We can try using a RandomForest ML algorithm because it is known for high accuracy and help predict good applicants to fund that will yield a successful outcome. 
+# Reading Scores by Grade
+Create a DataFrame that lists the average reading score for students of each grade level (9th, 10th, 11th, 12th) at each school.
+
+# Scores by School Spending
+Create a table that breaks down school performance based on average spending ranges (per student). Use your judgment to create four bins with reasonable cutoff values to group school spending. Include the following metrics in the table:
+
+- Average math score
+- Average reading score
+- % passing math (the percentage of students who passed math)
+- % passing reading (the percentage of students who passed reading)
+- % overall passing (the percentage of students who passed math AND reading)
+
+# Scores by School Size
+Create a table that breaks down school performance based on school size (small, medium, or large).
+
+# Scores by School Type
+Create a table that breaks down school performance based on type of school (district or charter).
